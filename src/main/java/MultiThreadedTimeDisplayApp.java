@@ -28,13 +28,13 @@ public class MultiThreadedTimeDisplayApp {
         scheduledExecutorService.scheduleAtFixedRate(messageDisplayTask, 5, 5, TimeUnit.SECONDS);
 
         try {
-            // Главный поток ожидает завершения задач
-            Thread.sleep(30000); // Примерно 30 секунд
+
+            Thread.sleep(30000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
 
-        // Завершение всех потоков
+
         executorService.shutdownNow();
         scheduledExecutorService.shutdownNow();
     }

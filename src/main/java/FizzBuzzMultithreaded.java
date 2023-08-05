@@ -22,7 +22,6 @@ public class FizzBuzzMultithreaded {
             }
         }
     }
-
     public void buzz(Runnable printBuzz) throws InterruptedException {
         while (true) {
             synchronized (lock) {
@@ -38,7 +37,6 @@ public class FizzBuzzMultithreaded {
             }
         }
     }
-
     public void fizzbuzz(Runnable printFizzBuzz) throws InterruptedException {
         while (true) {
             synchronized (lock) {
@@ -54,7 +52,6 @@ public class FizzBuzzMultithreaded {
             }
         }
     }
-
     public void number(IntConsumer printNumber) throws InterruptedException {
         while (true) {
             synchronized (lock) {
@@ -70,7 +67,6 @@ public class FizzBuzzMultithreaded {
             }
         }
     }
-
     public static void main(String[] args) {
         int n = 15;
         FizzBuzzMultithreaded fizzBuzz = new FizzBuzzMultithreaded(n);

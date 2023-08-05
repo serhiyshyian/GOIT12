@@ -21,7 +21,6 @@ public class MultiThreadedTimeDisplayApp {
             }
         };
 
-
         Runnable messageDisplayTask = () -> System.out.println("Прошло 5 секунд");
 
         executorService.submit(timeDisplayTask);
@@ -33,7 +32,6 @@ public class MultiThreadedTimeDisplayApp {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-
 
         executorService.shutdownNow();
         scheduledExecutorService.shutdownNow();
